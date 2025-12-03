@@ -121,35 +121,6 @@
             <div class="small-note">Full agenda with speakers and rooms will be available to registrants and posted on the event day.</div>
           </div>
         </section>
-<!-- DAYS UNTIL EVENT SCRIPT — PLACE RIGHT ABOVE </body> -->
-<script>
-    // Set the event date (adjust if needed)
-    const eventDay = new Date("February 11, 2026 08:00:00").getTime();
-
-    function calculateDays() {
-        const now = new Date().getTime();
-        const diff = eventDay - now;
-
-        // Calculate full days remaining
-        const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-
-        const banner = document.getElementById("days-banner");
-
-        if (diff <= 0) {
-            banner.innerHTML = "The event is today!";
-        } else {
-            banner.innerHTML = days + " Day" + (days !== 1 ? "s" : "") + " Until the Event";
-        }
-    }
-
-    // Run immediately
-    calculateDays();
-
-    // Recalculate once per day
-    setInterval(calculateDays, 1000 * 60 * 60 * 12);
-</script>
-<!-- END DAYS UNTIL EVENT SCRIPT -->
-
 
         <aside class="card flyer" aria-labelledby="flyer-heading">
           <h3 id="flyer-heading">SEP (SC) — Achievement Through Advocacy</h3>
@@ -158,49 +129,6 @@
           <div style="margin-top:8px;width:100%;">
             <strong>Location:</strong><br/>Solomon Blatt Building (Room 305) + Brookland Baptist Church
             <div style="margin-top:8px"><strong>Hashtag:</strong> <span class="muted">#KappasOnTheHill</span></div>
-
-	<script>
-// EVENT DETAILS FOR ICS FILE
-const event = {
-    title: "SEP (SC) Day on the Hill – Achievement Through Advocacy",
-    description: "Kappa Alpha Psi's South Carolina Day on the Hill: Advocacy, Leadership, Brotherhood.",
-    location: "South Carolina Statehouse, 1100 Gervais St, Columbia, SC 29201",
-    start: "20250326T080000", // March 26, 2025 8:00 AM
-    end:   "20250326T153000"  // March 26, 2025 3:30 PM
-};
-
-// Create ICS content
-function generateICS() {
-    const icsContent =
-`BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Kappa Alpha Psi//SEP Day on the Hill//EN
-CALSCALE:GREGORIAN
-BEGIN:VEVENT
-DTSTART:${event.start}
-DTEND:${event.end}
-SUMMARY:${event.title}
-DESCRIPTION:${event.description}
-LOCATION:${event.location}
-END:VEVENT
-END:VCALENDAR`;
-
-    // Convert to blob
-    const blob = new Blob([icsContent], { type: "text/calendar" });
-    const url = URL.createObjectURL(blob);
-
-    // Trigger download
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "SEP_Day_on_the_Hill.ics";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-
-// Add click listener
-document.getElementById("addToCalendarBtn").addEventListener("click", generateICS);
-</script>
 
 
           </div>
@@ -216,12 +144,12 @@ document.getElementById("addToCalendarBtn").addEventListener("click", generateIC
             <div class="muted">Grand Polemarch</div>
           </div>
           <div class="speaker" role="listitem">
-            <img src="https://via.placeholder.com/300x160.png?text=Brother+A.+Christopher+Lyons" alt="A. Christopher Lyons" />
+            <img src="https://via.placeholder.com/300x160.png?text=Brother+A.+Christopher+Lyons" alt="Brother A. Christopher Lyons" />
             <div style="font-weight:700;margin-top:8px">A. Christopher Lyons</div>
             <div class="muted">SEP Political Awareness Chair</div>
           </div>
           <div class="speaker" role="listitem">
-            <img src="https://via.placeholder.com/300x160.png?text=SEP+Polemarch+Brian+C.+Mock" alt="Brian C. Mock" />
+            <img src="https://via.placeholder.com/300x160.png?text=SEP+Polemarch+Brian+C.+Mock" alt="SEP Polemarch Brian C. Mock" />
             <div style="font-weight:700;margin-top:8px">Brian C. Mock</div>
             <div class="muted">Southeastern Province Polemarch</div>
           </div>
@@ -230,12 +158,9 @@ document.getElementById("addToCalendarBtn").addEventListener("click", generateIC
 
       <section class="card" id="register" aria-labelledby="reg-heading">
         <h2 id="reg-heading">Register for Day on the Hill</h2>
-        <p class="small muted">Registering helps us coordinate legislative meetings. You can either embed the Google Form (recommended) or submit via this site — we'll save responses to a Sheet.</p>
+        <p class="small muted">Registering helps us coordinate legislative meetings.</p>
 
-        <!-- Option A: Quick embed instructions -->
-        <div style="margin-bottom:12px">
-          <strong>Option A — Embed Google Form</strong>
-          <div class="small">If you created a Google Form using the Apps Script earlier, get the Published URL and paste it into an iframe. Example below.</div>
+        
           <div style="margin-top:8px">
             <iframe id="gform" title="Google Form" <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4inDHK7vWN-TKc_pzDxlUbf7hVJPxRRlgWai_QblU-opaqw/viewform?embedded=true" width="640" height="6119" frameborder="0" marginheight="0" marginwidth="0">
           </div>
@@ -318,6 +243,34 @@ document.getElementById("addToCalendarBtn").addEventListener("click", generateIC
         }
       });
     })();
+<!-- DAYS UNTIL EVENT SCRIPT — PLACE RIGHT ABOVE </body> -->
+<script>
+    // Set the event date (adjust if needed)
+    const eventDay = new Date("February 11, 2026 08:00:00").getTime();
+
+    function calculateDays() {
+        const now = new Date().getTime();
+        const diff = eventDay - now;
+
+        // Calculate full days remaining
+        const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+        const banner = document.getElementById("days-banner");
+
+        if (diff <= 0) {
+            banner.innerHTML = "The event is today!";
+        } else {
+            banner.innerHTML = days + " Day" + (days !== 1 ? "s" : "") + " Until the Event";
+        }
+    }
+
+    // Run immediately
+    calculateDays();
+
+    // Recalculate once per day
+    setInterval(calculateDays, 1000 * 60 * 60 * 12);
+</script>
+<!-- END DAYS UNTIL EVENT SCRIPT -->
   </script>
 </body>
 </html>
