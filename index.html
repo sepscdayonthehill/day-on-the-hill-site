@@ -124,7 +124,7 @@
 
         <aside class="card flyer" aria-labelledby="flyer-heading">
           <h3 id="flyer-heading">Event Flyer (inspired)</h3>
-          <img src="https://via.placeholder.com/320x220.png?text=SEP+Day+on+the+Hill+Flyer" alt="SEP Day on the Hill - flyer preview" />
+          <img src="SEP (SC) DAY ON THE HILL.jpg" alt="Day on the Hill Flyer" />
           <p class="muted" style="text-align:center;margin:0">Tip: Replace this image with your flyer (PNG/JPG) for consistent branding.</p>
           <div style="margin-top:8px;width:100%;">
             <strong>Location:</strong><br/>Solomon Blatt Building (Room 305) + Brookland Baptist Church
@@ -137,17 +137,17 @@
         <h2 id="speakers-heading">Speakers & Leadership</h2>
         <div class="speakers" role="list">
           <div class="speaker" role="listitem">
-            <img src="https://via.placeholder.com/300x160.png?text=Jimmy+McMikle" alt="Grand Polemarch Jimmy McMikle" />
+            <img src="https://via.placeholder.com/300x160.png?text=Grand+Polemarch+Jimmy+McMikle" alt="Grand Polemarch Jimmy McMikle" />
             <div style="font-weight:700;margin-top:8px">Jimmy McMikle</div>
             <div class="muted">Grand Polemarch</div>
           </div>
           <div class="speaker" role="listitem">
-            <img src="https://via.placeholder.com/300x160.png?text=A.+Christopher+Lyons" alt="A. Christopher Lyons" />
+            <img src="https://via.placeholder.com/300x160.png?text=Brother+A.+Christopher+Lyons" alt="A. Christopher Lyons" />
             <div style="font-weight:700;margin-top:8px">A. Christopher Lyons</div>
             <div class="muted">SEP Political Awareness Chair</div>
           </div>
           <div class="speaker" role="listitem">
-            <img src="https://via.placeholder.com/300x160.png?text=Brian+C.+Mock" alt="Brian C. Mock" />
+            <img src="https://via.placeholder.com/300x160.png?text=SEP+Polemarch+Brian+C.+Mock" alt="Brian C. Mock" />
             <div style="font-weight:700;margin-top:8px">Brian C. Mock</div>
             <div class="muted">Southeastern Province Polemarch</div>
           </div>
@@ -163,7 +163,7 @@
           <strong>Option A — Embed Google Form</strong>
           <div class="small">If you created a Google Form using the Apps Script earlier, get the Published URL and paste it into an iframe. Example below.</div>
           <div style="margin-top:8px">
-            <iframe id="gform" title="Google Form" src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true" width="100%" height="720" frameborder="0">Loading…</iframe>
+            <iframe id="gform" title="Google Form" <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4inDHK7vWN-TKc_pzDxlUbf7hVJPxRRlgWai_QblU-opaqw/viewform?embedded=true" width="640" height="6119" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>" width="100%" height="720" frameborder="0">Loading…</iframe>
           </div>
         </div>
 
@@ -331,6 +331,36 @@
         }
       });
     })();
+
+<!-- DAYS UNTIL EVENT SCRIPT — PLACE RIGHT ABOVE </body> -->
+<script>
+    // Set the event date (adjust if needed)
+    const eventDay = new Date("February 11, 2026 08:00:00").getTime();
+
+    function calculateDays() {
+        const now = new Date().getTime();
+        const diff = eventDay - now;
+
+        // Calculate full days remaining
+        const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+        const banner = document.getElementById("days-banner");
+
+        if (diff <= 0) {
+            banner.innerHTML = "The event is today!";
+        } else {
+            banner.innerHTML = days + " Day" + (days !== 1 ? "s" : "") + " Until the Event";
+        }
+    }
+
+    // Run immediately
+    calculateDays();
+
+    // Recalculate once per day
+    setInterval(calculateDays, 1000 * 60 * 60 * 12);
+</script>
+<!-- END DAYS UNTIL EVENT SCRIPT -->
+
   </script>
 </body>
 </html>
