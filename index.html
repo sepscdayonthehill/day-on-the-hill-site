@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SEP (SC) Day on the Hill — Achievement Through Advocacy</title>
+  <meta name="description" content="SEP (SC) Day on the Hill — Achievement Through Advocacy. Join Kappa Alpha Psi in Columbia for legislative meetings, advocacy training, and community conversations." />
+  <style>
+    /* Simple modern responsive styles inspired by an event flyer */
+    :root{
+      --accent:#a20000; /* deep red like Kappa colors */
+      --accent-2:#222;
+      --muted:#6b6b6b;
+      --bg:#fff;
+      --maxw:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:#f7f7f8;color:#111;line-height:1.45}
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+    header.hero{
+      background: linear-gradient(180deg, rgba(162,0,0,0.95), rgba(20,20,20,0.95));
+      color:#fff;padding:36px 20px;border-radius:10px;
+      display:flex;gap:20px;align-items:center;flex-wrap:wrap;
+    }
+    .hero-left{flex:1;min-width:260px}
+    .logo{
+      width:92px;height:92px;border-radius:8px;background:#fff;color:var(--accent);
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.2);
+    }
+    h1{margin:0 0 8px;font-size:28px}
+    .tag{font-weight:600;color:#ffd9d9}
+    .when, .where{margin-top:10px;color:#fff;opacity:0.95}
+    .cta{margin-top:18px}
+    .btn{
+      display:inline-block;padding:10px 16px;border-radius:8px;background:#fff;color:var(--accent);font-weight:700;text-decoration:none;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12)
+    }
+
+    main{margin-top:20px;display:grid;grid-template-columns:1fr;gap:22px}
+    .card{background:#fff;border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .grid-2{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    @media (max-width:900px){ .grid-2{grid-template-columns:1fr} }
+
+    .schedule h3{margin-top:0}
+    .session{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #efefef}
+    .time{min-width:96px;color:var(--muted);font-weight:700}
+    .title{font-weight:700}
+    .muted{color:var(--muted)}
+
+    .speakers{display:flex;gap:12px;flex-wrap:wrap}
+    .speaker{background:#fff;padding:10px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.04);width:160px;text-align:center}
+    .speaker img{width:100%;height:100px;object-fit:cover;border-radius:6px}
+
+    .flyer{
+      background:linear-gradient(180deg,#fff,#fafafa);padding:18px;border-radius:8px;display:flex;flex-direction:column;gap:10px;align-items:center;
+    }
+    .flyer img{max-width:100%;border-radius:6px}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px;padding:12px 0}
+    /* registration form */
+    .form-row{display:flex;gap:8px}
+    .form-row .col{flex:1}
+    label{display:block;font-size:13px;margin-bottom:6px}
+    input[type="text"], input[type="email"], input[type="tel"], textarea, select{
+      width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:14px;
+    }
+    textarea{min-height:80px;resize:vertical}
+    .small{font-size:13px;color:var(--muted);margin-top:6px}
+    .success{background:#e6ffef;border:1px solid #c7f0d3;padding:10px;border-radius:8px;color:#086a3d}
+    .error{background:#ffecec;border:1px solid #f6c0c0;padding:10px;border-radius:8px;color:#8b1c1c}
+    nav.toplinks{display:flex;gap:10px;flex-wrap:wrap}
+    a.anchor{color:var(--accent);text-decoration:none;font-weight:700}
+    .small-note{font-size:13px;color:#333;margin-top:8px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero" role="banner" aria-label="SEP SC Day on the Hill Hero">
+      <div class="logo" aria-hidden="true">ΚΑΨ</div>
+      <div class="hero-left">
+        <div class="tag">SEP (SC) — Achievement Through Advocacy</div>
+        <h1>Day on the Hill — Kappas on the Hill</h1>
+        <div class="when"><strong>Date:</strong> [Insert event date here] · <strong>Time:</strong> 8:00 AM — 3:30 PM</div>
+        <div class="where"><strong>Location:</strong> Solomon Blatt Building / Brookland Baptist Church / SC State Capitol, Columbia, SC</div>
+
+        <div class="cta">
+          <a href="#register" class="btn" id="openReg">Register Now</a>
+          &nbsp;<a class="anchor" href="#agenda">View Agenda</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid-2">
+        <section class="card" aria-labelledby="agenda-heading">
+          <h2 id="agenda-heading">Agenda (Summary)</h2>
+          <div class="schedule">
+            <div class="session"><div class="time">8:00–8:45</div><div><div class="title">Registration & Brotherhood Breakfast</div><div class="muted">Solomon Blatt Building — Room 305</div></div></div>
+
+            <div class="session"><div class="time">8:45–9:00</div><div><div class="title">Call to Order & Invocation</div><div class="muted">Chaplain William Buie</div></div></div>
+
+            <div class="session"><div class="time">9:00–9:30</div><div><div class="title">State of the Fraternity in Public Policy</div><div class="small muted">Grand Polemarch Jimmy McMikle / A. Christopher Lyons</div></div></div>
+
+            <div class="session"><div class="time">9:30–9:45</div><div><div class="title">Advocacy Training & Briefing</div></div></div>
+
+            <div class="session"><div class="time">10:00–11:15</div><div><div class="title">Gallery Seating & House Floor Recognition</div><div class="muted">Remarks by Southeastern Province Polemarch Brian C. Mock</div></div></div>
+
+            <div class="session"><div class="time">12:00–1:00</div><div><div class="title">Luncheon & Fireside Chat</div><div class="muted">Brookland Baptist Church</div></div></div>
+
+            <div class="session"><div class="time">1:00–1:45</div><div><div class="title">Legislative Meetings</div></div></div>
+
+            <div class="session"><div class="time">1:45–2:15</div><div><div class="title">Capitol Tour & Photo</div></div></div>
+
+            <div class="session"><div class="time">2:15–2:45</div><div><div class="title">Policy Roundtable</div></div></div>
+
+            <div class="session"><div class="time">2:45–3:15</div><div><div class="title">Meet & Greet – Legislative Black Caucus</div></div></div>
+
+            <div class="session"><div class="time">3:15–3:30</div><div><div class="title">Closing Session & Adjourn</div></div></div>
+
+            <div class="small-note">Full agenda with speakers and rooms will be available to registrants and posted on the event day.</div>
+          </div>
+        </section>
+
+        <aside class="card flyer" aria-labelledby="flyer-heading">
+          <h3 id="flyer-heading">Event Flyer (inspired)</h3>
+          <img src="https://via.placeholder.com/320x220.png?text=SEP+Day+on+the+Hill+Flyer" alt="SEP Day on the Hill - flyer preview" />
+          <p class="muted" style="text-align:center;margin:0">Tip: Replace this image with your flyer (PNG/JPG) for consistent branding.</p>
+          <div style="margin-top:8px;width:100%;">
+            <strong>Location:</strong><br/>Solomon Blatt Building (Room 305) + Brookland Baptist Church
+            <div style="margin-top:8px"><strong>Hashtag:</strong> <span class="muted">#KappasOnTheHill</span></div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="card" id="speakers" aria-labelledby="speakers-heading">
+        <h2 id="speakers-heading">Speakers & Leadership</h2>
+        <div class="speakers" role="list">
+          <div class="speaker" role="listitem">
+            <img src="https://via.placeholder.com/300x160.png?text=Jimmy+McMikle" alt="Grand Polemarch Jimmy McMikle" />
+            <div style="font-weight:700;margin-top:8px">Jimmy McMikle</div>
+            <div class="muted">Grand Polemarch</div>
+          </div>
+          <div class="speaker" role="listitem">
+            <img src="https://via.placeholder.com/300x160.png?text=A.+Christopher+Lyons" alt="A. Christopher Lyons" />
+            <div style="font-weight:700;margin-top:8px">A. Christopher Lyons</div>
+            <div class="muted">SEP Political Awareness Chair</div>
+          </div>
+          <div class="speaker" role="listitem">
+            <img src="https://via.placeholder.com/300x160.png?text=Brian+C.+Mock" alt="Brian C. Mock" />
+            <div style="font-weight:700;margin-top:8px">Brian C. Mock</div>
+            <div class="muted">Southeastern Province Polemarch</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="register" aria-labelledby="reg-heading">
+        <h2 id="reg-heading">Register for Day on the Hill</h2>
+        <p class="small muted">Registering helps us coordinate legislative meetings. You can either embed the Google Form (recommended) or submit via this site — we'll save responses to a Sheet.</p>
+
+        <!-- Option A: Quick embed instructions -->
+        <div style="margin-bottom:12px">
+          <strong>Option A — Embed Google Form</strong>
+          <div class="small">If you created a Google Form using the Apps Script earlier, get the Published URL and paste it into an iframe. Example below.</div>
+          <div style="margin-top:8px">
+            <iframe id="gform" title="Google Form" src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true" width="100%" height="720" frameborder="0">Loading…</iframe>
+          </div>
+        </div>
+
+        <hr style="margin:18px 0"/>
+
+        <!-- Option B: Custom registration form posts to Apps Script -->
+        <div>
+          <strong>Option B — Register here (posts to Apps Script)</strong>
+          <form id="regForm" novalidate>
+            <div class="form-row">
+              <div class="col">
+                <label for="first">First Name *</label>
+                <input id="first" name="firstName" type="text" required />
+              </div>
+              <div class="col">
+                <label for="last">Last Name *</label>
+                <input id="last" name="lastName" type="text" required />
+              </div>
+            </div>
+
+            <div class="form-row" style="margin-top:8px">
+              <div class="col">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+              <div class="col">
+                <label for="phone">Mobile Phone *</label>
+                <input id="phone" name="phone" type="tel" required />
+              </div>
+            </div>
+
+            <div style="margin-top:8px">
+              <label for="chapter">Chapter Name *</label>
+              <input id="chapter" name="chapter" type="text" required />
+            </div>
+
+            <div style="margin-top:8px">
+              <label for="address">Home Address (Street, City, State, ZIP) *</label>
+              <textarea id="address" name="address" required></textarea>
+            </div>
+
+            <div style="margin-top:8px">
+              <label for="county">County of Residence *</label>
+              <input id="county" name="county" type="text" required />
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+              <div>
+                <label for="attend">Full Day? *</label>
+                <select id="attend" name="fullDay" required>
+                  <option value="">-- choose --</option>
+                  <option value="Yes, full day">Yes, full day</option>
+                  <option value="No, partial attendance">No, partial attendance</option>
+                </select>
+              </div>
+              <div>
+                <label for="lead">Willing to serve as Group Lead *</label>
+                <select id="lead" name="groupLead" required>
+                  <option value="">-- choose --</option>
+                  <option>Yes</option><option>No</option><option>Maybe / Need more information</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-top:8px">
+              <label>Policy Interests *</label>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <label><input type="checkbox" name="interest" value="Education Equity" /> Education</label>
+                <label><input type="checkbox" name="interest" value="Criminal Justice Reform" /> Criminal Justice</label>
+                <label><input type="checkbox" name="interest" value="Mentoring & Youth Leadership" /> Mentoring</label>
+                <label><input type="checkbox" name="interest" value="HBCU Advocacy" /> HBCU Advocacy</label>
+                <label><input type="checkbox" name="interest" value="Health Equity" /> Health Equity</label>
+                <label><input type="checkbox" name="interest" value="Community Development" /> Community Dev</label>
+              </div>
+            </div>
+
+            <div style="margin-top:8px">
+              <label for="diet">Dietary Restrictions</label>
+              <input id="diet" name="diet" type="text" placeholder="Vegetarian, Vegan, None, etc." />
+            </div>
+
+            <div style="margin-top:8px">
+              <label for="emergency">Emergency Contact (Name & Phone) *</label>
+              <input id="emergency" name="emergency" type="text" required />
+            </div>
+
+            <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+              <button type="submit" class="btn">Submit Registration</button>
+              <div id="formStatus" aria-live="polite"></div>
+            </div>
+            <div class="small" style="margin-top:8px">By submitting you consent to being contacted about event logistics. Photo consent handled separately.</div>
+          </form>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact & Logistics</h2>
+        <p><strong>Event Lead:</strong> Polemarch Ashley Grant</p>
+        <p><strong>Logistics:</strong> For legislative scheduling, contact team leads to coordinate counties and representatives. For technical site issues, email <a href="mailto:events@kappa.org">events@kappa.org</a></p>
+        <p class="muted">Tip: Add calendar ICS file for "Add to calendar" buttons and an accessibility statement on the live site.</p>
+      </section>
+    </main>
+
+    <footer>
+      © SEP (SC) Day on the Hill — Achievement Through Advocacy · <span class="muted">#KappasOnTheHill</span>
+    </footer>
+  </div>
+
+  <script>
+    // Client-side form submit (Option B)
+    (function(){
+      const form = document.getElementById('regForm');
+      const status = document.getElementById('formStatus');
+
+      // TODO: replace this with your deployed Apps Script web app URL from Step 3
+      const APPS_SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/YOUR_APPS_SCRIPT_WEB_APP_ID/exec";
+
+      function collectInterests(formEl){
+        const boxes = formEl.querySelectorAll('input[name="interest"]:checked');
+        return Array.from(boxes).map(n=>n.value);
+      }
+
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        status.innerHTML = '';
+        // basic client validation
+        if(!form.firstName.value.trim() || !form.lastName.value.trim() || !form.email.value.trim()){
+          status.innerHTML = '<div class="error">Please complete all required fields (name, email).</div>';
+          return;
+        }
+
+        const payload = {
+          firstName: form.firstName.value.trim(),
+          lastName: form.lastName.value.trim(),
+          email: form.email.value.trim(),
+          phone: form.phone.value.trim(),
+          chapter: form.chapter.value.trim(),
+          address: form.address.value.trim(),
+          county: form.county.value.trim(),
+          fullDay: form.fullDay.value,
+          groupLead: form.groupLead.value,
+          interests: collectInterests(form),
+          diet: form.diet.value.trim(),
+          emergency: form.emergency.value.trim(),
+          timestamp: (new Date()).toISOString()
+        };
+
+        try{
+          const res = await fetch(APPS_SCRIPT_WEBAPP_URL, {
+            method: 'POST',
+            body: JSON.stringify(payload),
+            headers: {'Content-Type':'application/json'}
+          });
+          const json = await res.json();
+          if(res.ok && json.status === 'success'){
+            status.innerHTML = '<div class="success">Thanks! Your registration was received. We will contact you with event details.</div>';
+            form.reset();
+          } else {
+            status.innerHTML = '<div class="error">Submission failed. Please try again or contact events@kappa.org</div>';
+            console.error('Server response:', json);
+          }
+        } catch (err){
+          status.innerHTML = '<div class="error">Submission error. Check your connection and try again.</div>';
+          console.error(err);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
