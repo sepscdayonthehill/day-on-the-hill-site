@@ -243,34 +243,23 @@
         }
       });
     })();
-<!-- DAYS UNTIL EVENT SCRIPT — PLACE RIGHT ABOVE </body> -->
-<script>
-    // Set the event date (adjust if needed)
-    const eventDay = new Date("February 11, 2026 08:00:00").getTime();
+<button id="addToCalendarBtn">Add to Calendar (.ics)</button>
+#addToCalendarBtn {
+    background-color: #990000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+}
 
-    function calculateDays() {
-        const now = new Date().getTime();
-        const diff = eventDay - now;
+#addToCalendarBtn:hover {
+    background-color: #770000;
+}
 
-        // Calculate full days remaining
-        const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
 
-        const banner = document.getElementById("days-banner");
-
-        if (diff <= 0) {
-            banner.innerHTML = "The event is today!";
-        } else {
-            banner.innerHTML = days + " Day" + (days !== 1 ? "s" : "") + " Until the Event";
-        }
-    }
-
-    // Run immediately
-    calculateDays();
-
-    // Recalculate once per day
-    setInterval(calculateDays, 1000 * 60 * 60 * 12);
-</script>
-<!-- END DAYS UNTIL EVENT SCRIPT -->
   </script>
 </body>
 </html>
