@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SEP (SC) Day on the Hill — Achievement Through Advocacy</title>
-  <meta name="description" content="SEP (SC) Day on the Hill — Achievement Through Advocacy. Join Kappa Alpha Psi in Columbia for legislative meetings, advocacy training, and community conversations." />
+  <title>Kappas on the Hill 2026 — Achievement Through Advocacy</title>
+  <meta name="description" content="Join the Rock Hill Alumni Chapter and the Southeastern Province for Day on the Hill in Columbia, SC." />
   <style>
-    /* Simple modern responsive styles inspired by an event flyer */
     :root{
-      --accent:#a20000; /* deep red like Kappa colors */
+      --accent:#a20000; 
       --accent-2:#222;
       --muted:#6b6b6b;
       --bg:#fff;
@@ -18,239 +17,161 @@
     *{box-sizing:border-box}
     body{margin:0;background:#f7f7f8;color:#111;line-height:1.45}
     .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+    
     header.hero{
       background: linear-gradient(180deg, rgba(162,0,0,0.95), rgba(20,20,20,0.95));
-      color:#fff;padding:36px 20px;border-radius:10px;
+      color:#fff;padding:40px 24px;border-radius:10px;
       display:flex;gap:20px;align-items:center;flex-wrap:wrap;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
     .hero-left{flex:1;min-width:260px}
     .logo{
       width:92px;height:92px;border-radius:8px;background:#fff;color:var(--accent);
-      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;
       box-shadow:0 6px 18px rgba(0,0,0,0.2);
     }
-    h1{margin:0 0 8px;font-size:28px}
-    .tag{font-weight:600;color:#ffd9d9}
-    .when, .where{margin-top:10px;color:#fff;opacity:0.95}
-    .cta{margin-top:18px}
+    h1{margin:0 0 8px;font-size:32px; letter-spacing: -0.5px;}
+    .tag{font-weight:600;color:#ffd9d9;text-transform: uppercase; font-size: 14px; letter-spacing: 1px;}
+    .when, .where{margin-top:10px;color:#fff;opacity:0.95; font-size: 1.1rem;}
+    
+    .cta{margin-top:24px; display: flex; gap: 12px; align-items: center;}
     .btn{
-      display:inline-block;padding:10px 16px;border-radius:8px;background:#fff;color:var(--accent);font-weight:700;text-decoration:none;
-      box-shadow:0 6px 18px rgba(0,0,0,0.12)
+      display:inline-block;padding:12px 24px;border-radius:8px;background:#fff;color:var(--accent);font-weight:700;text-decoration:none;
+      transition: transform 0.2s; box-shadow:0 6px 18px rgba(0,0,0,0.12);
     }
+    .btn:hover{transform: translateY(-2px);}
+    .anchor{color:#fff;text-decoration:underline;font-weight:600; font-size: 15px;}
 
-    main{margin-top:20px;display:grid;grid-template-columns:1fr;gap:22px}
-    .card{background:#fff;border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    .grid-2{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    main{margin-top:24px;display:grid;grid-template-columns:1fr;gap:24px}
+    .card{background:#fff;border-radius:10px;padding:24px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .grid-2{display:grid;grid-template-columns:1fr 380px;gap:24px}
     @media (max-width:900px){ .grid-2{grid-template-columns:1fr} }
 
     .schedule h3{margin-top:0}
-    .session{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #efefef}
-    .time{min-width:96px;color:var(--muted);font-weight:700}
-    .title{font-weight:700}
-    .muted{color:var(--muted)}
-
-    .speakers{display:flex;gap:12px;flex-wrap:wrap}
-    .speaker{background:#fff;padding:10px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.04);width:160px;text-align:center}
-    .speaker img{width:100%;height:100px;object-fit:cover;border-radius:6px}
+    .session{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid #f0f0f0}
+    .session:last-child{border-bottom:none}
+    .time{min-width:140px;color:var(--accent);font-weight:700; font-size: 0.95rem;}
+    .title{font-weight:700; font-size: 1.05rem; margin-bottom: 2px;}
+    .muted{color:var(--muted); font-size: 0.9rem;}
 
     .flyer{
-      background:linear-gradient(180deg,#fff,#fafafa);padding:18px;border-radius:8px;display:flex;flex-direction:column;gap:10px;align-items:center;
+      background:linear-gradient(180deg,#fff,#fafafa);text-align:center;
     }
-    .flyer img{max-width:100%;border-radius:6px}
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px;padding:12px 0}
-    /* registration form */
-    .form-row{display:flex;gap:8px}
-    .form-row .col{flex:1}
-    label{display:block;font-size:13px;margin-bottom:6px}
-    input[type="text"], input[type="email"], input[type="tel"], textarea, select{
-      width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:14px;
+    .flyer img{max-width:100%;border-radius:6px; margin: 15px 0; border: 1px solid #ddd;}
+    
+    #addToCalendarBtn {
+      background-color: var(--accent);
+      color: white; padding: 12px 20px; border: none; border-radius: 8px;
+      font-size: 14px; font-weight: 700; cursor: pointer; width: 100%;
     }
-    textarea{min-height:80px;resize:vertical}
-    .small{font-size:13px;color:var(--muted);margin-top:6px}
-    .success{background:#e6ffef;border:1px solid #c7f0d3;padding:10px;border-radius:8px;color:#086a3d}
-    .error{background:#ffecec;border:1px solid #f6c0c0;padding:10px;border-radius:8px;color:#8b1c1c}
-    nav.toplinks{display:flex;gap:10px;flex-wrap:wrap}
-    a.anchor{color:var(--accent);text-decoration:none;font-weight:700}
-    .small-note{font-size:13px;color:#333;margin-top:8px}
+    #addToCalendarBtn:hover { background-color: #800000; }
+
+    /* Form Container */
+    .iframe-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 100%; /* Adjust height for the long form */
+    }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      width: 100%; height: 100%; border: none;
+    }
+
+    footer{margin-top:40px;text-align:center;color:var(--muted);font-size:14px;padding:24px 0; border-top: 1px solid #ddd;}
   </style>
 </head>
 <body>
   <div class="container">
-    <header class="hero" role="banner" aria-label="SEP SC Day on the Hill Hero">
+    <header class="hero" role="banner">
       <div class="logo" aria-hidden="true">ΚΑΨ</div>
       <div class="hero-left">
-        <div class="tag">SEP (SC) — Achievement Through Advocacy</div>
+        <div class="tag">Rock Hill Alumni | Southeastern Province</div>
         <h1>Day on the Hill — Kappas on the Hill</h1>
-        <div class="when"><strong>Date:</strong> February 11, 2026 · <strong>Time:</strong> 8:00 AM — 3:30 PM</div>
-        <div class="where"><strong>Location:</strong> Solomon Blatt Building / Brookland Baptist Church / SC State Capitol, Columbia, SC</div>
+        <div class="when"><strong>Select Date:</strong> April 15 or May 6, 2026</div>
+        <div class="where"><strong>Location:</strong> SC State House, Columbia, SC</div>
 
         <div class="cta">
-          <a href="#register" class="btn" id="openReg">Register Now</a>
-          &nbsp;<a class="anchor" href="#agenda">View Agenda</a>
+          <a href="#register" class="btn">Register Online</a>
+          <a class="anchor" href="#agenda">View Agenda</a>
         </div>
       </div>
     </header>
 
     <main>
       <div class="grid-2">
-        <section class="card" aria-labelledby="agenda-heading">
-          <h2 id="agenda-heading">Agenda (Summary)</h2>
+        <section class="card" id="agenda">
+          <h2>Official Agenda</h2>
           <div class="schedule">
-            <div class="session"><div class="time">8:00–8:45</div><div><div class="title">Registration & Brotherhood Breakfast</div><div class="muted">Solomon Blatt Building — Room 305</div></div></div>
-
-            <div class="session"><div class="time">8:45–9:00</div><div><div class="title">Call to Order & Invocation</div><div class="muted">Chaplain William Buie</div></div></div>
-
-            <div class="session"><div class="time">9:00–9:30</div><div><div class="title">State of the Fraternity in Public Policy</div><div class="small muted">SEP Political Awareness Chair A. Christopher Lyons</div></div></div>
-
-            <div class="session"><div class="time">9:30–9:45</div><div><div class="title">Advocacy Training & Briefing</div></div></div>
-
-            <div class="session"><div class="time">10:00–11:15</div><div><div class="title">Gallery Seating & House Floor Recognition</div><div class="muted">Remarks by TBD</div></div></div>
-
-            <div class="session"><div class="time">12:00–1:00</div><div><div class="title">Luncheon</div><div class="muted">Brookland Baptist Church</div></div></div>
-
-            <div class="session"><div class="time">1:00–3:00</div><div><div class="title">Conversations with Legislators (extended meetings with legislators and staff)</div><div class="muted">Brookland Baptist Church</div></div></div>
-
-            <div class="session"><div class="time">3:00–3:30</div><div><div class="title">Closing Session & Adjourn</div></div></div>
-
-            <div class="small-note">Full agenda with speakers and rooms will be available to registrants and posted on the event day.</div>
+            <div class="session">
+              <div class="time">08:30 AM</div>
+              <div><div class="title">Muster & Carpool Assembly</div><div class="muted">Designated Parking Area (Senior Carpools Emphasized)</div></div>
+            </div>
+            <div class="session">
+              <div class="time">09:00 AM</div>
+              <div><div class="title">Opening Prayer & Strategic Briefing</div><div class="muted">Capitol Lobby / Designated Briefing Point</div></div>
+            </div>
+            <div class="session">
+              <div class="time">10:00 AM</div>
+              <div><div class="title">Gallery Observation</div><div class="muted">Witnessing House/Senate sessions from the Gallery</div></div>
+            </div>
+            <div class="session">
+              <div class="time">11:00 AM – 1:00 PM</div>
+              <div><div class="title">Representative Meeting Blocks</div><div class="muted">Scheduled rotations with State Representatives & Senators</div></div>
+            </div>
+            <div class="session">
+              <div class="time">01:00 PM</div>
+              <div><div class="title">Group Photo</div><div class="muted">South Carolina State House Steps</div></div>
+            </div>
+            <div class="session">
+              <div class="time">01:30 PM</div>
+              <div><div class="title">Optional Fellowship Lunch</div><div class="muted">Self-paid at local Columbia eateries</div></div>
+            </div>
           </div>
         </section>
 
-        <aside class="card flyer" aria-labelledby="flyer-heading">
-          <h3 id="flyer-heading">SEP (SC) — Achievement Through Advocacy</h3>
-          <img src="SEPSCDAYONTHEHILL.jpg" alt="Day on the Hill Flyer" />
+        <aside class="card flyer">
+          <h3>Save the Date</h3>
+          <p class="muted">Add this event to your mobile or desktop calendar.</p>
+          <button id="addToCalendarBtn">📅 Add to Calendar (.ics)</button>
           
-          <div style="margin-top:8px;width:100%;">
-            <strong>Location:</strong><br/>Solomon Blatt Building (Room 305) + Brookland Baptist Church
-            <div style="margin-top:8px"><strong>Hashtag:</strong> <span class="muted">#KappasOnTheHill</span></div>
-
-
+          <img src="SEPSCDAYONTHEHILL.jpg" alt="Day on the Hill Flyer" onerror="this.style.display='none'"/>
+          
+          <div style="text-align:left; font-size: 14px; margin-top: 15px;">
+            <strong>Hashtag:</strong> <span style="color:var(--accent)">#KappasOnTheHill</span><br/>
+            <strong>Event Lead:</strong> Polemarch Ashley Grant
           </div>
         </aside>
       </div>
 
-      <section class="card" id="speakers" aria-labelledby="speakers-heading">
-        <h2 id="speakers-heading">Speakers & Leadership</h2>
-        <div class="speakers" role="list">
-        <div class="speaker" role="listitem">
-            <img src="https://via.placeholder.com/300x160.png?text=Brother+A.+Christopher+Lyons" alt="Brother A. Christopher Lyons" />
-            <div style="font-weight:700;margin-top:8px">A. Christopher Lyons</div>
-            <div class="muted">SEP Political Awareness Chair</div>
-          </div>
+      <section class="card" id="register">
+        <h2>Secure Registration</h2>
+        <p>Brothers, please complete the form below to ensure we can coordinate your legislative meetings and parking permits.</p>
+        
+        <div class="iframe-container">
+          <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform?embedded=true">Loading…</iframe>
         </div>
       </section>
 
-      <section class="card" id="register" aria-labelledby="reg-heading">
-        <h2 id="reg-heading">Register for Day on the Hill</h2>
-        <p class="small muted">Registering helps us coordinate legislative meetings.</p>
-
-        
-          <div style="margin-top:8px">
-            <iframe id="gform" title="Google Form" <iframe src="https://docs.google.com/forms/d/1-yJ2HylV5vBb_E8uWtdaxq78uHxVRSqaHuSPMybAUTY/edit" width="640" height="6119" frameborder="0" marginheight="0" marginwidth="0">
-          </div>
-        </div>
-
-        <hr style="margin:18px 0"/>
-
-        
-      </section>
-
-      <section class="card" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact & Logistics</h2>
-        <p><strong>Event Lead:</strong> Polemarch Ashley Grant</p>
-        <p><strong>Logistics:</strong> For legislative scheduling, contact team leads to coordinate counties and representatives. For technical site issues, email <a href="mailto:sepscdayonthehill@gmail.com">sepscdayonthehill@gmail.com</a></p>
-        <p class="muted">Tip: Add calendar ICS file for "Add to calendar" buttons and an accessibility statement on the live site.</p>
+      <section class="card">
+        <h3>Contact & Support</h3>
+        <p>For legislative scheduling or group logistics, please contact the event leads. For technical issues with this registration portal, email <a href="mailto:sepscdayonthehill@gmail.com" style="color:var(--accent)">sepscdayonthehill@gmail.com</a>.</p>
       </section>
     </main>
 
     <footer>
-      © SEP (SC) Day on the Hill — Achievement Through Advocacy · <span class="muted">#KappasOnTheHill</span>
+      &copy; 2026 Rock Hill Alumni Chapter of Kappa Alpha Psi Fraternity, Inc. <br/>
+      Achievement Through Advocacy
     </footer>
   </div>
 
   <script>
-    // Client-side form submit (Option B)
-    (function(){
-      const form = document.getElementById('regForm');
-      const status = document.getElementById('formStatus');
-
-      // TODO: replace this with your deployed Apps Script web app URL from Step 3
-      const APPS_SCRIPT_WEBAPP_URL = "https://script.google.com/macros/s/YOUR_APPS_SCRIPT_WEB_APP_ID/exec";
-
-      function collectInterests(formEl){
-        const boxes = formEl.querySelectorAll('input[name="interest"]:checked');
-        return Array.from(boxes).map(n=>n.value);
-      }
-
-      form.addEventListener('submit', async function(e){
-        e.preventDefault();
-        status.innerHTML = '';
-        // basic client validation
-        if(!form.firstName.value.trim() || !form.lastName.value.trim() || !form.email.value.trim()){
-          status.innerHTML = '<div class="error">Please complete all required fields (name, email).</div>';
-          return;
-        }
-
-        const payload = {
-          firstName: form.firstName.value.trim(),
-          lastName: form.lastName.value.trim(),
-          email: form.email.value.trim(),
-          phone: form.phone.value.trim(),
-          chapter: form.chapter.value.trim(),
-          address: form.address.value.trim(),
-          county: form.county.value.trim(),
-          fullDay: form.fullDay.value,
-          groupLead: form.groupLead.value,
-          interests: collectInterests(form),
-          diet: form.diet.value.trim(),
-          emergency: form.emergency.value.trim(),
-          timestamp: (new Date()).toISOString()
-        };
-
-        try{
-          const res = await fetch(APPS_SCRIPT_WEBAPP_URL, {
-            method: 'POST',
-            body: JSON.stringify(payload),
-            headers: {'Content-Type':'application/json'}
-          });
-          const json = await res.json();
-          if(res.ok && json.status === 'success'){
-            status.innerHTML = '<div class="success">Thanks! Your registration was received. We will contact you with event details.</div>';
-            form.reset();
-          } else {
-            status.innerHTML = '<div class="error">Submission failed. Please try again or contact events@kappa.org</div>';
-            console.error('Server response:', json);
-          }
-        } catch (err){
-          status.innerHTML = '<div class="error">Submission error. Check your connection and try again.</div>';
-          console.error(err);
-        }
-      });
-    })();
-<button id="addToCalendarBtn">Add to Calendar (.ics)</button>
-#addToCalendarBtn {
-    background-color: #990000;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-#addToCalendarBtn:hover {
-    background-color: #770000;
-}
-
-
+    // Placeholder for .ics generation logic
+    document.getElementById('addToCalendarBtn').addEventListener('click', function() {
+      alert('Calendar download starting... (Ensure you have updated the date in the script logic)');
+      // You can add logic here to generate a Blob for an .ics file
+    });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
